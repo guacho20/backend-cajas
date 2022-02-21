@@ -1,0 +1,26 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "cajasapi",
+    "autoLoadEntities": true,
+    "entities": [
+        "dist/src/entities/**/*.entity.js"
+    ],
+    "migrationsTableName": "migrations_list",
+    "migrations": [
+        "dist/db/migration/**/*.js"
+    ],
+    "subscribers": [
+        "dist/db/subscriber/**/*.js"
+    ],
+    "seeds": ["src/seeds/**/*.seed.ts"],
+    "factories": ["src/factories/**/*.factory{.ts,.js}"],
+    "cli": {
+        "entitiesDir": "src/entities",
+        "migrationsDir": "db/migration",
+        "subscribersDir": "db/subscribers"
+    }
+}
